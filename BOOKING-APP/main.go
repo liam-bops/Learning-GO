@@ -17,12 +17,19 @@ func main() {
 
 	var userName string
 	var userTickets int
-
+	var bookings [10]string // array to store the bookings names, size is 10, type is string
 	fmt.Print("Enter your name: ")
 	fmt.Scan(&userName) // fmt.Scan() is used to take input from the user
 	fmt.Print("Enter the number of tickets you want to book: ")
-	fmt.Scan(&userTickets) // & is used to get the address of the variable
-
-	fmt.Printf("User %v is booking %v tickets\n", userName, userTickets)
+	fmt.Scan(&userTickets)                                  // & is used to get the address of the variable
+	remainingTickets = remainingTickets - uint(userTickets) // typecasting userTickets to uint as remainingTickets is of type uint, or change userTickets to uint
+	bookings[0] = userName
+	bookings[1] = "Test User 2"
+	bookings[2] = "Test User 3"
+	bookings[3] = "Test User 4"
+	fmt.Printf("User %v is booking %v tickets\nTickets remaining : %v\n", userName, userTickets, remainingTickets)
+	fmt.Println("Bookings so far: ", bookings)
+	fmt.Println("Booking[0] : ", bookings[0])
+	fmt.Println("Thank you for booking !!")
 
 }
