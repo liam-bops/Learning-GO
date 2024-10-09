@@ -18,8 +18,11 @@ func main() {
 	var userName string
 	var userTickets int
 
-	userName = "John Doe"
-	userTickets = 5
+	fmt.Print("Enter your name: ")
+	fmt.Scan(&userName) // fmt.Scan() is used to take input from the user
+	fmt.Print("Enter the number of tickets you want to book: ")
+	fmt.Scan(&userTickets) // & is used to get the address of the variable
+
 	fmt.Printf("User %v is booking %v tickets\n", userName, userTickets)
 
 }
